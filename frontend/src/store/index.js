@@ -1,7 +1,13 @@
-import {configureStore, createStore} from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
-export const store = createStore({
-    reducers: {
+import hotelsReducer from "./slices/hotelsSlice.js";
+import destinationsReducer from "./slices/destisnationsSlice.js";
+import authReducer from "./slices/authSlice.js";
 
+export const store = configureStore({
+    reducer: {
+        hotels: hotelsReducer,
+        destinations: destinationsReducer,
+        auth: authReducer,
     }
 })

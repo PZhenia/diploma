@@ -1,0 +1,36 @@
+.header {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: var(--lg) var(--xl);
+    z-index: 1000;
+    margin-bottom: var(--xl);
+}
+
+.leftNav {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.rightNav {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.navLink {
+    color: var(--textColor);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: var(--xs);
+    border-radius: var(--xs);
+}
+
+.navLink:hover {
+    color: var(--color-back-white);
+    background-color: var(--textColor);
+}

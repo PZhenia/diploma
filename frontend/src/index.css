@@ -12,11 +12,12 @@
 :root {
     /*----Paddings, Margins----*/
     --xs: 8px;
-    --s: 12px;
-    --sm: 16px;
-    --md: 24px;
-    --lg: 32px;
-    --xl: 40px;
+    --s: 16px;
+    --sm: 24px;
+    --md: 32px;
+    --lg: 40px;
+    --xl: 60px;
+    --xxl: 120px;
 
     /*----Fonts----*/
     --font-family: "Inter", sans-serif;
@@ -73,19 +74,22 @@
     --text-5xl: var(--font-weight-black) var(--text-5xl-size)/var(--text-5xl-line-height) var(--font-family);
 
     /*------Colors------*/
-    --color-primary-900: #004D43;
-    --color-primary-700: #00796B;
-    --color-primary-500: #009180;
-    --color-primary-300: #00BBA5;
-    --color-primary-100: #CCF4ED;
+    --color-primary-900: #8a2a28;  /* Найтемніший */
+    --color-primary-700: #b43c39;
+    --color-primary-500: #dd5d5a;  /* Базовий колір */
+    --color-primary-300: #e68d8b;
+    --color-primary-100: #f8d6d5;  /* Найсвітліший */
 
-    --color-primary-hover: #009d8e;
-    --color-primary-active: #006E63;
-    --color-primary-disabled: #9ACFC8;
+    --color-primary-hover: #c95552;   /* Трохи темніший при наведенні */
+    --color-primary-active: #a83835;  /* Ще темніший при натисканні */
+    --color-primary-disabled: #e0b2b1;
 
-    --color-error: #E74C3C;
+    --color-error: #388E3C;
 
-    --textColor: #333333;
+    --textColor: #181818;
+
+    --color-back-white: #ffffff;
+    --color-back-beige: #f8f8f8;
 }
 
 body {

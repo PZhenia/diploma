@@ -1,0 +1,11 @@
+.hotelCard {
+    width: 280px;
+    padding: var(--xs);
+    margin-bottom: var(--sm);
+    border-radius: var(--xs);
+}
+
+.hotelImg {
+    height: 280px;
+    border-radius: var(--xs);
+}
