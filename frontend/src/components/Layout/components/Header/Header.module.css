@@ -6,7 +6,6 @@
     right: 0;
     padding: var(--lg) var(--xl);
     z-index: 1000;
-    margin-bottom: var(--xl);
 }
 
 .leftNav {

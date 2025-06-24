@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Help from "./pages/help";
+import Hotels from "./pages/hotels/index.jsx";
 
 import Layout from "./components/Layout";
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "help",
         element: <Help />
+      },
+      {
+        path: "hotels",
+        element: <Hotels />
       },
       {
         path: "*",

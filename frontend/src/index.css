@@ -74,14 +74,14 @@
     --text-5xl: var(--font-weight-black) var(--text-5xl-size)/var(--text-5xl-line-height) var(--font-family);
 
     /*------Colors------*/
-    --color-primary-900: #8a2a28;  /* Найтемніший */
+    --color-primary-900: #8a2a28;
     --color-primary-700: #b43c39;
     --color-primary-500: #dd5d5a;  /* Базовий колір */
     --color-primary-300: #e68d8b;
-    --color-primary-100: #f8d6d5;  /* Найсвітліший */
+    --color-primary-100: #f8d6d5;
 
-    --color-primary-hover: #c95552;   /* Трохи темніший при наведенні */
-    --color-primary-active: #a83835;  /* Ще темніший при натисканні */
+    --color-primary-hover: #c95552;
+    --color-primary-active: #a83835;
     --color-primary-disabled: #e0b2b1;
 
     --color-error: #388E3C;

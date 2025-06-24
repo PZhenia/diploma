@@ -1,9 +1,10 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import useDebounce from "../../hooks/useDebounce.js"
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
+import useDebounce from "../../hooks/useDebounce.js";
+
+import Typography from "@mui/material/Typography";
 
 import { getHotels } from "../../store/thunks/hotelsThunk";
 
@@ -11,24 +12,27 @@ import SearchBar from "../../components/UI/molecules/SearchBar";
 import BookingDates from "../../components/UI/molecules/BookingDates";
 import GuestPicker from "../../components/UI/molecules/GuestPicker/index.jsx";
 import Hotel from "./components/Hotel";
+import CategoryCard from "../../components/UI/molecules/CategoryCard/index.jsx";
 
-import styles from './Home.module.css';
+import Pagination from "@mui/material/Pagination";
+
+import styles from "./Home.module.css";
 
 const theme = createTheme({
     typography: {
         heroTitle: {
-            fontSize: '82px',
+            fontSize: "82px",
             fontWeight: 900,
-            color: '#ffffff',
+            color: "#ffffff",
             lineHeight: 1.2,
-            letterSpacing: '0.5px',
+            letterSpacing: "0.5px",
         },
     },
     components: {
         MuiTypography: {
             defaultProps: {
                 variantMapping: {
-                    heroTitle: 'h1',
+                    heroTitle: "h1",
                 },
             },
         },
@@ -38,10 +42,13 @@ const theme = createTheme({
 export default function Home() {
     const dispatch = useDispatch();
 
-    const [searchQuery, setSearchQuery] = useState('');
+    const [searchQuery, setSearchQuery] = useState("");
     const debouncedQuery = useDebounce(searchQuery);
 
-    const [randomBg, setRandomBg] = useState('');
+    const [randomBg, setRandomBg] = useState("");
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const hotelsPerPage = 10;
 
     const hotels = useSelector(state => state.hotels.hotels || []);
 
@@ -63,6 +70,15 @@ export default function Home() {
         );
     }, [debouncedQuery, hotels]);
 
+    const totalPages = Math.ceil(filteredHotels.length / hotelsPerPage);
+    const startIndex = (currentPage - 1) * hotelsPerPage;
+    const currentHotels = filteredHotels.slice(startIndex, startIndex + hotelsPerPage);
+
+    const handlePageChange = (event, value) => {
+        setCurrentPage(value);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
     return (
         <ThemeProvider theme={theme}>
             <div className={styles.homeWrapper} style={{ backgroundImage: randomBg }}>
@@ -81,19 +97,41 @@ export default function Home() {
                 </div>
             </div>
 
+            <div className={styles.categoryList}>
+                <CategoryCard />
+            </div>
+
             <div className={styles.hotelsList}>
-                {filteredHotels.length > 0  ? filteredHotels.map(hotel => (
-                    <Hotel
-                        key={hotel.id}
-                        title={hotel.name}
-                        city={hotel.city}
-                        hotelLocation={hotel.address}
-                        ratingValue={hotel.rating}
-                        category={hotel.category}
-                    />
-                ))
-                : <div style={{margin: "auto"}}>There are no hotels for this search query</div>
-                }
+                {currentHotels.length > 0 ? (
+                    currentHotels.map(hotel => (
+                        <Hotel
+                            key={hotel.id}
+                            title={hotel.name}
+                            city={hotel.city}
+                            hotelLocation={hotel.address}
+                            ratingValue={hotel.rating}
+                            category={hotel.category}
+                        />
+                    ))
+                ) : (
+                    <div style={{ margin: "auto" }}>
+                        There are no hotels for this search query
+                    </div>
+                )}
+            </div>
+
+            <div className={styles.paginationWrapper}>
+                {totalPages > 1 && (
+                    <div>
+                        <Pagination
+                            count={totalPages}
+                            page={currentPage}
+                            onChange={handlePageChange}
+                            color="#f8f8f8"
+                            size="large"
+                        />
+                    </div>
+                )}
             </div>
         </ThemeProvider>
     );

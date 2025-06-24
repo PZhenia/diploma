@@ -1,0 +1,14 @@
+.hotelsList {
+    padding: var(--xl);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--sm);
+    margin-top: var(--md);
+}
+
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

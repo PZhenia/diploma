@@ -1,20 +1,20 @@
 import { NavLink } from "react-router";
 
 import { Grid } from "@mui/material";
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
 
-import styles from './Header.module.css';
+import styles from "./Header.module.css";
 
 const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: 'transparent', // Зроблено прозорим
+    backgroundColor: "transparent",
     ...theme.typography.body2,
     padding: theme.spacing(1),
-    textAlign: 'center',
-    color: '#fff', // Білий текст
-    boxShadow: 'none', // Видалено тінь
-    ...theme.applyStyles('dark', {
-        backgroundColor: 'transparent',
+    textAlign: "center",
+    color: "#fff",
+    boxShadow: "none",
+    ...theme.applyStyles("dark", {
+        backgroundColor: "transparent",
     }),
 }));
 
