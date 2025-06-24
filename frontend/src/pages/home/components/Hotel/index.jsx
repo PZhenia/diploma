@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -23,17 +24,23 @@ function getRandomImage(category) {
 }
 
 export default function HotelCard({
-    title = "title",
-    city = "city",
-    hotelLocation = "address",
-    ratingValue = 0,
-    category = "City",
-    }) {
+                                      id,
+                                      title = "title",
+                                      city = "city",
+                                      hotelLocation = "address",
+                                      ratingValue = 0,
+                                      category = "City",
+                                  }) {
+    const navigate = useNavigate();
     const imageUrl = getRandomImage(category);
+
+    const handleClick = () => {
+        navigate(`/hotel/${id}`);
+    };
 
     return (
         <Card className={styles.hotelCard}>
-            <CardActionArea>
+            <CardActionArea onClick={handleClick}>
                 <CardMedia
                     component="img"
                     image={imageUrl}

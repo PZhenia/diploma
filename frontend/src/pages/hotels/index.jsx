@@ -36,6 +36,7 @@ export default function Hotels() {
                     currentHotels.map(hotel => (
                         <Hotel
                             key={hotel.id}
+                            id={hotel.id}
                             title={hotel.name}
                             city={hotel.city}
                             hotelLocation={hotel.address}
