@@ -32,7 +32,7 @@ export default function About() {
                     "We don’t just help you book a stay. We help you start a story."
                 </Typography>
 
-                <Typography>
+                <Typography component="div">
                     What makes us different?
                     <ul>
                         <li>Carefully selected accommodations</li>

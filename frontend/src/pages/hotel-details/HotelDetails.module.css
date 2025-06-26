@@ -14,3 +14,7 @@
 .hotelImg {
     height: 100%;
 }
+
+.mainBtn {
+    margin-top: var(--md);
+}

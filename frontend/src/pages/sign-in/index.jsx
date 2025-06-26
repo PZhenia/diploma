@@ -16,15 +16,39 @@ import styles from "../../styles/Auth.module.css";
 export default function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { loading } = useSelector(state => state.auth);
 
+    const [errors, setErrors] = useState({ email: "", password: "" });
+
+    const { loading } = useSelector(state => state.auth);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
 
+    const validateEmail = (value) => {
+        if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value)) {
+            return "Invalid email format.";
+        }
+        return "";
+    };
+
+    const validatePassword = (value) => {
+        if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(value)) {
+            return "Password must be at least 6 characters and contain letters and numbers.";
+        }
+        return "";
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const emailError = validateEmail(email);
+        const passwordError = validatePassword(password);
+
+        setErrors({ email: emailError, password: passwordError });
+
+        if (emailError || passwordError) return;
+
         const result = await dispatch(signIn({ email, password }));
         if (result.meta.requestStatus === "fulfilled") {
             navigate(from, { replace: true });
@@ -45,14 +69,20 @@ export default function SignIn() {
                     fullWidth
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    onBlur={() => setErrors({ ...errors, email: validateEmail(email) })}
+                    error={!!errors.email}
+                    helperText={errors.email}
                 />
                 <TextField
                     label="Password"
-                    variant="outlined"
                     type="password"
+                    variant="outlined"
                     fullWidth
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    onBlur={() => setErrors({ ...errors, password: validatePassword(password) })}
+                    error={!!errors.password}
+                    helperText={errors.password}
                 />
 
                 <Button

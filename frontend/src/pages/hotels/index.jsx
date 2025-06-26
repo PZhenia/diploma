@@ -64,7 +64,7 @@ export default function Hotels() {
                 </div>
             )}
 
-            <MainPageBtn onClick={() => navigate("/")} />
+            <MainPageBtn />
         </div>
     );
 }

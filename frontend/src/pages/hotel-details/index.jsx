@@ -76,7 +76,9 @@ export default function HotelDetails() {
                     </a>
                 </Typography>
             )}
-            <MainPageBtn/>
+            <div className={styles.mainBtn}>
+                <MainPageBtn />
+            </div>
         </div>
     );
 }
