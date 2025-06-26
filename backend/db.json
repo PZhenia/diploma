@@ -117,8 +117,7 @@
       "hotel_rating": 4,
       "phone_number": "18005740835",
       "website": null,
-      "category": "City",
-      "rating": 4.5
+      "category": "City"
     },
     {
       "id": 11003176,
@@ -130,8 +129,7 @@
       "hotel_rating": 0,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4
+      "category": "City"
     },
     {
       "id": 747134,
@@ -143,8 +141,7 @@
       "hotel_rating": 3.5,
       "phone_number": "212260414",
       "website": null,
-      "category": "Lakefront",
-      "rating": 3.5
+      "category": "Lakefront"
     },
     {
       "id": 720550,
@@ -156,8 +153,7 @@
       "hotel_rating": 3,
       "phone_number": "1 212 2191018",
       "website": null,
-      "category": "Lakefront",
-      "rating": 4.5
+      "category": "Lakefront"
     },
     {
       "id": 797074,
@@ -169,8 +165,7 @@
       "hotel_rating": 2.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 5
+      "category": "City"
     },
     {
       "id": 742987,
@@ -182,8 +177,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 2
+      "category": "City"
     },
     {
       "id": 743452,
@@ -195,8 +189,7 @@
       "hotel_rating": 3.5,
       "phone_number": "1-212-398-2700",
       "website": null,
-      "category": "City",
-      "rating": 3
+      "category": "City"
     },
     {
       "id": 260469,
@@ -208,8 +201,7 @@
       "hotel_rating": 3,
       "phone_number": "1 212 777-0012",
       "website": null,
-      "category": "Beachfront",
-      "rating": 5
+      "category": "Beachfront"
     },
     {
       "id": 740399,
@@ -221,8 +213,7 @@
       "hotel_rating": 3,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 4
+      "category": "Beachfront"
     },
     {
       "id": 5018104,
@@ -234,8 +225,7 @@
       "hotel_rating": 3,
       "phone_number": "XX",
       "website": null,
-      "category": "City",
-      "rating": 4
+      "category": "City"
     },
     {
       "id": 792811,
@@ -247,8 +237,7 @@
       "hotel_rating": 4.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4.5
+      "category": "City"
     },
     {
       "id": 804220,
@@ -260,8 +249,7 @@
       "hotel_rating": 2.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 3
+      "category": "City"
     },
     {
       "id": 5018107,
@@ -273,8 +261,7 @@
       "hotel_rating": 3,
       "phone_number": "17186985000",
       "website": null,
-      "category": "Lakefront",
-      "rating": 3.5
+      "category": "Lakefront"
     },
     {
       "id": 700390,
@@ -286,8 +273,7 @@
       "hotel_rating": 4.5,
       "phone_number": null,
       "website": null,
-      "category": "Lakefront",
-      "rating": 2.5
+      "category": "Lakefront"
     },
     {
       "id": 742946,
@@ -299,8 +285,7 @@
       "hotel_rating": 3,
       "phone_number": null,
       "website": null,
-      "category": "Lakefront",
-      "rating": 3.5
+      "category": "Lakefront"
     },
     {
       "id": 776932,
@@ -312,8 +297,7 @@
       "hotel_rating": 4,
       "phone_number": "121-247-51920",
       "website": "https://freehandhotels.com/new-york/rooms/",
-      "category": "Castles",
-      "rating": 4.5
+      "category": "Castles"
     },
     {
       "id": 741741,
@@ -325,8 +309,7 @@
       "hotel_rating": 2,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 4
+      "category": "Castles"
     },
     {
       "id": 716815,
@@ -338,8 +321,7 @@
       "hotel_rating": 3,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 4
+      "category": "Castles"
     },
     {
       "id": 802583,
@@ -351,8 +333,7 @@
       "hotel_rating": 5,
       "phone_number": "+1 212 842 5500",
       "website": null,
-      "category": "Tropical",
-      "rating": 5
+      "category": "Tropical"
     },
     {
       "id": 5018106,
@@ -364,8 +345,7 @@
       "hotel_rating": 3,
       "phone_number": null,
       "website": null,
-      "category": "Tropical",
-      "rating": 5
+      "category": "Tropical"
     },
     {
       "id": 751736,
@@ -377,8 +357,7 @@
       "hotel_rating": 3,
       "phone_number": "703-261-5677",
       "website": null,
-      "category": "Tropical",
-      "rating": 4.5
+      "category": "Tropical"
     },
     {
       "id": 386689,
@@ -390,8 +369,7 @@
       "hotel_rating": 2.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4
+      "category": "City"
     },
     {
       "id": 567484,
@@ -403,8 +381,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 3
+      "category": "City"
     },
     {
       "id": 677300,
@@ -416,8 +393,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 4
+      "category": "Beachfront"
     },
     {
       "id": 820605,
@@ -429,8 +405,7 @@
       "hotel_rating": null,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 5
+      "category": "Beachfront"
     },
     {
       "id": 731189,
@@ -442,8 +417,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 4
+      "category": "Beachfront"
     },
     {
       "id": 721848,
@@ -455,8 +429,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 2.5
+      "category": "Castles"
     },
     {
       "id": 677341,
@@ -468,8 +441,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 2.5
+      "category": "Castles"
     },
     {
       "id": 677347,
@@ -481,8 +453,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Lakefront",
-      "rating": 5
+      "category": "Lakefront"
     },
     {
       "id": 810445,
@@ -494,8 +465,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Lakefront",
-      "rating": 4
+      "category": "Lakefront"
     },
     {
       "id": 677372,
@@ -507,8 +477,7 @@
       "hotel_rating": 3,
       "phone_number": null,
       "website": null,
-      "category": "Lakefront",
-      "rating": 3.5
+      "category": "Lakefront"
     },
     {
       "id": 822534,
@@ -520,8 +489,7 @@
       "hotel_rating": null,
       "phone_number": null,
       "website": null,
-      "category": "Tropical",
-      "rating": 4
+      "category": "Tropical"
     },
     {
       "id": 793847,
@@ -533,8 +501,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Tropical",
-      "rating": 5
+      "category": "Tropical"
     },
     {
       "id": 677396,
@@ -546,8 +513,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 5
+      "category": "Beachfront"
     },
     {
       "id": 677411,
@@ -559,8 +525,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4.5
+      "category": "City"
     },
     {
       "id": 677410,
@@ -572,8 +537,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4
+      "category": "City"
     },
     {
       "id": 677425,
@@ -585,8 +549,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 3.5
+      "category": "City"
     },
     {
       "id": 677426,
@@ -598,8 +561,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 3
+      "category": "City"
     },
     {
       "id": 721859,
@@ -611,8 +573,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Lakefront",
-      "rating": 4.5
+      "category": "Lakefront"
     },
     {
       "id": 801610,
@@ -624,8 +585,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Lakefront",
-      "rating": 5
+      "category": "Lakefront"
     },
     {
       "id": 677429,
@@ -637,8 +597,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 5
+      "category": "Castles"
     },
     {
       "id": 677433,
@@ -650,8 +609,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 5
+      "category": "Castles"
     },
     {
       "id": 677449,
@@ -663,8 +621,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 4
+      "category": "Castles"
     },
     {
       "id": 677450,
@@ -676,8 +633,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4
+      "category": "City"
     },
     {
       "id": 677452,
@@ -689,8 +645,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 3
+      "category": "City"
     },
     {
       "id": 677455,
@@ -702,8 +657,7 @@
       "hotel_rating": 3,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 3.5
+      "category": "Beachfront"
     },
     {
       "id": 677470,
@@ -715,8 +669,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4.5
+      "category": "City"
     },
     {
       "id": 677476,
@@ -728,8 +681,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4
+      "category": "City"
     },
     {
       "id": 677477,
@@ -741,8 +693,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 3.5
+      "category": "City"
     },
     {
       "id": 677480,
@@ -754,8 +705,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 3
+      "category": "City"
     },
     {
       "id": 677481,
@@ -767,8 +717,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4
+      "category": "City"
     },
     {
       "id": 677519,
@@ -780,8 +729,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 5
+      "category": "Beachfront"
     },
     {
       "id": 677520,
@@ -793,8 +741,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 5
+      "category": "Beachfront"
     },
     {
       "id": 705227,
@@ -806,8 +753,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 4.5
+      "category": "Beachfront"
     },
     {
       "id": 696618,
@@ -819,8 +765,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Tropical",
-      "rating": 4
+      "category": "Tropical"
     },
     {
       "id": 677526,
@@ -832,8 +777,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Tropical",
-      "rating": 3.5
+      "category": "Tropical"
     },
     {
       "id": 677527,
@@ -845,8 +789,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 3
+      "category": "Castles"
     },
     {
       "id": 677528,
@@ -858,8 +801,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 4.5
+      "category": "Castles"
     },
     {
       "id": 677537,
@@ -871,8 +813,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 4
+      "category": "Castles"
     },
     {
       "id": 696614,
@@ -884,8 +825,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Lakefront",
-      "rating": 3
+      "category": "Lakefront"
     },
     {
       "id": 677694,
@@ -897,8 +837,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Lakefront",
-      "rating": 5
+      "category": "Lakefront"
     },
     {
       "id": 677550,
@@ -910,8 +849,7 @@
       "hotel_rating": 3,
       "phone_number": null,
       "website": null,
-      "category": "Lakefront",
-      "rating": 5
+      "category": "Lakefront"
     },
     {
       "id": 787996,
@@ -923,8 +861,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 5
+      "category": "City"
     },
     {
       "id": 731262,
@@ -936,8 +873,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4.5
+      "category": "City"
     },
     {
       "id": 677559,
@@ -949,8 +885,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 4
+      "category": "City"
     },
     {
       "id": 677565,
@@ -962,8 +897,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "City",
-      "rating": 3.5
+      "category": "City"
     },
     {
       "id": 677571,
@@ -975,8 +909,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 4.5
+      "category": "Beachfront"
     },
     {
       "id": 724715,
@@ -988,8 +921,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 5
+      "category": "Beachfront"
     },
     {
       "id": 677574,
@@ -1001,8 +933,7 @@
       "hotel_rating": 4,
       "phone_number": null,
       "website": null,
-      "category": "Beachfront",
-      "rating": 5
+      "category": "Beachfront"
     },
     {
       "id": 677577,
@@ -1014,8 +945,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 4
+      "category": "Castles"
     },
     {
       "id": 757401,
@@ -1027,8 +957,7 @@
       "hotel_rating": 3.5,
       "phone_number": null,
       "website": null,
-      "category": "Castles",
-      "rating": 2.5
+      "category": "Castles"
     }
   ]
 }

@@ -1,0 +1,16 @@
+.hotelContainer {
+    margin-top: var(--md);
+    padding: var(--xl);
+}
+
+.carouselContainer {
+    width: 50%;
+    height: 560px;
+    margin: 0 auto;
+    border-radius: var(--md);
+    overflow: hidden;
+}
+
+.hotelImg {
+    height: 100%;
+}

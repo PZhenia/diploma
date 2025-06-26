@@ -28,7 +28,7 @@ export default function HotelCard({
                                       title = "title",
                                       city = "city",
                                       hotelLocation = "address",
-                                      ratingValue = 0,
+                                      ratingValue,
                                       category = "City",
                                   }) {
     const navigate = useNavigate();
@@ -57,7 +57,14 @@ export default function HotelCard({
                     <Typography variant="body2" sx={{ color: "text.secondary" }}>
                         {hotelLocation}
                     </Typography>
-                    <Rating name="half-rating-read" defaultValue={ratingValue} precision={0.5} readOnly />
+                    {ratingValue != null && (
+                        <Rating
+                            name="half-rating-read"
+                            defaultValue={ratingValue}
+                            precision={0.5}
+                            readOnly
+                        />
+                    )}
                 </CardContent>
             </CardActionArea>
         </Card>

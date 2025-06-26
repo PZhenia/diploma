@@ -26,6 +26,7 @@ export default function Header() {
                     <Item><NavLink to="/" className={styles.navLink}>Home</NavLink></Item>
                     <Item><NavLink to="/about" className={styles.navLink}>About</NavLink></Item>
                     <Item><NavLink to="/help" className={styles.navLink}>Help</NavLink></Item>
+                    <Item><NavLink to="/my-hotels" className={styles.navLink}>My Hotels</NavLink></Item>
                 </Grid>
                 <Grid size={4} className={styles.rightNav}>
                     <Item><NavLink to="/sign-in" className={styles.navLink}>Sign In</NavLink></Item>

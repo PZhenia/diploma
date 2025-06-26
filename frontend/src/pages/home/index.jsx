@@ -110,7 +110,7 @@ export default function Home() {
                             title={hotel.name}
                             city={hotel.city}
                             hotelLocation={hotel.address}
-                            ratingValue={hotel.rating}
+                            ratingValue={hotel.hotel_rating}
                             category={hotel.category}
                         />
                     ))

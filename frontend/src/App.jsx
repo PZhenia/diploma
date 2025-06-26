@@ -5,8 +5,12 @@ import About from "./pages/about";
 import Help from "./pages/help";
 import Hotels from "./pages/hotels/index.jsx";
 import HotelDetails from "./pages/hotel-details/index.jsx";
+import MyHotels from "./pages/my-hotels";
+import SignIn from "./pages/sign-in/index.jsx";
+import SignUp from "./pages/sign-up/index.jsx";
 
 import Layout from "./components/Layout";
+import PrivateRoute from "./components/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +20,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />
+      },
+      {
+        path: "sign-up",
+        element: <SignUp />
+      },
+      {
+        path: "sign-in",
+        element: <SignIn />
       },
       {
         path: "about",
@@ -32,6 +44,14 @@ const router = createBrowserRouter([
       {
         path: "hotel/:id",
         element: <HotelDetails />
+      },
+      {
+        path: "my-hotels",
+        element: (
+            <PrivateRoute>
+              <MyHotels />
+            </PrivateRoute>
+        )
       },
       {
         path: "*",
