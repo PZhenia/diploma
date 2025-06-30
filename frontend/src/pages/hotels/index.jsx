@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useSearchParams, useNavigate } from "react-router";
 import Pagination from "@mui/material/Pagination";
 import Hotel from "../home/components/Hotel";
-import MainPageBtn from "../../components/UI/atoms/MainPageBtn";
+import NavigateBtn from "../../components/UI/atoms/NavigateBtn/index.jsx";
 
 import styles from "./Hotels.module.css";
 
@@ -29,6 +29,10 @@ export default function Hotels() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
+    const handleClick = () => {
+        navigate("/");
+    }
+
     return (
         <div className={styles.pageWrapper}>
             <div className={styles.hotelsList}>
@@ -50,21 +54,22 @@ export default function Hotels() {
             </div>
 
             {totalPages > 1 && (
-                <div>
-                    <Pagination
-                        count={totalPages}
-                        page={currentPage}
-                        onChange={handlePageChange}
-                        color="#f8f8f8"
-                        size="large"
-                        sx={{
-                            marginBottom: "24px"
-                        }}
-                    />
-                </div>
+                <Pagination
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    color="#f8f8f8"
+                    size="large"
+                    sx={{
+                        marginBottom: "24px"
+                    }}
+                />
             )}
 
-            <MainPageBtn />
+            <NavigateBtn
+                onClick={handleClick}
+                text="Go on Main Page"
+            />
         </div>
     );
 }

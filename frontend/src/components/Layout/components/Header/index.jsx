@@ -4,6 +4,8 @@ import { Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 
+import {authRoutes, headerRoutes} from "../../../../helpers/headerRoutes.js";
+
 import styles from "./Header.module.css";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -23,14 +25,30 @@ export default function Header() {
         <header className={styles.header}>
             <Grid container spacing={2}>
                 <Grid size={8} className={styles.leftNav}>
-                    <Item><NavLink to="/" className={styles.navLink}>Home</NavLink></Item>
-                    <Item><NavLink to="/about" className={styles.navLink}>About</NavLink></Item>
-                    <Item><NavLink to="/help" className={styles.navLink}>Help</NavLink></Item>
-                    <Item><NavLink to="/my-hotels" className={styles.navLink}>My Hotels</NavLink></Item>
+                    {headerRoutes.map(({ label, path }) => (
+                        <Item>
+                            <NavLink
+                                key={path}
+                                to={path}
+                                className={styles.navLink}
+                            >
+                                <span>{label}</span>
+                            </NavLink>
+                        </Item>
+                    ))}
                 </Grid>
                 <Grid size={4} className={styles.rightNav}>
-                    <Item><NavLink to="/sign-in" className={styles.navLink}>Sign In</NavLink></Item>
-                    <Item><NavLink to="/sign-up" className={styles.navLink}>Sign Up</NavLink></Item>
+                    {authRoutes.map(({ label, path }) => (
+                        <Item>
+                            <NavLink
+                                key={path}
+                                to={path}
+                                className={styles.navLink}
+                            >
+                                <span>{label}</span>
+                            </NavLink>
+                        </Item>
+                    ))}
                 </Grid>
             </Grid>
         </header>

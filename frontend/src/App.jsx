@@ -11,6 +11,7 @@ import SignUp from "./pages/sign-up/index.jsx";
 
 import Layout from "./components/Layout";
 import PrivateRoute from "./components/PrivateRoute";
+import { hotelsLoader, hotelLoader } from "./loaders/hotelsLoader.js";
 
 const router = createBrowserRouter([
   {
@@ -39,11 +40,13 @@ const router = createBrowserRouter([
       },
       {
         path: "hotels",
-        element: <Hotels />
+        element: <Hotels />,
+        loader: hotelsLoader,
       },
       {
         path: "hotel/:id",
-        element: <HotelDetails />
+        element: <HotelDetails />,
+        loader: hotelLoader,
       },
       {
         path: "my-hotels",

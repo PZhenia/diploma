@@ -1,11 +1,9 @@
-import { useParams } from "react-router";
-import { useSelector } from "react-redux";
-import { Typography, Rating } from "@mui/material";
-import Carousel from 'react-material-ui-carousel';
-import { Paper } from '@mui/material';
+import { useNavigate } from "react-router";
+import { useLoaderData } from "react-router";
+import { Typography, Rating, Paper } from "@mui/material";
+import Carousel from "react-material-ui-carousel";
 
-import MainPageBtn from "../../components/UI/atoms/MainPageBtn/index.jsx";
-
+import NavigateBtn from "../../components/UI/atoms/NavigateBtn/index.jsx";
 import styles from "./HotelDetails.module.css";
 
 function getCategoryImages(category) {
@@ -20,16 +18,28 @@ function getCategoryImages(category) {
 }
 
 export default function HotelDetails() {
-    const { id } = useParams();
-    const hotel = useSelector(state =>
-        state.hotels.hotels.find(h => String(h.id) === String(id))
-    );
+    const navigate = useNavigate();
+    const hotel = useLoaderData();
 
-    if (!hotel) {
+    if (!hotel || typeof hotel !== "object" || hotel.error) {
         return <Typography>Hotel not found</Typography>;
     }
 
-    const images = getCategoryImages(hotel.category);
+    const {
+        name,
+        hotel_rating,
+        category,
+        city,
+        address,
+        phone_number,
+        website
+    } = hotel;
+
+    const images = getCategoryImages(category);
+
+    const handleClick = () => {
+        navigate("/");
+    };
 
     return (
         <div className={styles.hotelContainer}>
@@ -56,28 +66,34 @@ export default function HotelDetails() {
                 </Carousel>
             </div>
 
-            <Typography variant="h4" mt={4}>{hotel.name}</Typography>
-            {hotel.hotel_rating !== null && (
-                <Rating value={hotel.hotel_rating} precision={0.5} readOnly />
+            <Typography variant="h4" mt={4}>{name}</Typography>
+
+            {hotel_rating !== null && (
+                <Rating value={hotel_rating} precision={0.5} readOnly />
             )}
+
             <Typography variant="body1" color="text.secondary" mt={2}>
-                {hotel.city}, {hotel.address}
+                {city}, {address}
             </Typography>
 
-            {hotel.phone_number && (
-                <Typography mt={1}><strong>Phone:</strong> {hotel.phone_number}</Typography>
+            {phone_number && (
+                <Typography mt={1}><strong>Phone:</strong> {phone_number}</Typography>
             )}
 
-            {hotel.website && (
+            {website && (
                 <Typography mt={1}>
                     <strong>Website:</strong>{" "}
-                    <a href={hotel.website} target="_blank" rel="noopener noreferrer">
-                        {hotel.website}
+                    <a href={website} target="_blank" rel="noopener noreferrer">
+                        {website}
                     </a>
                 </Typography>
             )}
+
             <div className={styles.mainBtn}>
-                <MainPageBtn />
+                <NavigateBtn
+                    onClick={handleClick}
+                    text="Go on Main Page"
+                />
             </div>
         </div>
     );
