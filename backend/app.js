@@ -9,7 +9,7 @@ const destinationsRoutes = require('./routes/destinations');
 const registerRoutes = require('./routes/sign-up');
 
 app.use(cors({
-    origin: 'https://resonant-longma-e4bd72.netlify.app/',
+    origin: 'https://resonant-longma-e4bd72.netlify.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
