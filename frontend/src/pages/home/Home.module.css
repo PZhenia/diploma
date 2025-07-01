@@ -33,6 +33,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .hotelsList {
@@ -55,3 +56,29 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media (max-width: 1366px) {
+    .bookingPanel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bookingPanel > :nth-child(1) {
+        order: 1;
+    }
+
+    .bookingPanel > :nth-child(2) {
+        order: 3;
+    }
+
+    .bookingPanel > :nth-child(3) {
+        order: 2;
+    }
+
+    .bookingPanel > * {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+

@@ -59,7 +59,7 @@ export default function Hotels() {
                     page={currentPage}
                     onChange={handlePageChange}
                     color="#f8f8f8"
-                    size="large"
+                    size="medium"
                     sx={{
                         marginBottom: "24px"
                     }}

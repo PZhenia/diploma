@@ -1,6 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
 
 import useDebounce from "../../hooks/useDebounce.js";
 
@@ -52,6 +53,8 @@ export default function Home() {
 
     const hotels = useSelector(state => state.hotels.hotels || []);
 
+    const isSmallScreen = useMediaQuery("(max-width:454px)");
+
     useEffect(() => {
         dispatch(getHotels());
 
@@ -83,7 +86,16 @@ export default function Home() {
         <ThemeProvider theme={theme}>
             <div className={styles.homeWrapper} style={{ backgroundImage: randomBg }}>
                 <div className={styles.content}>
-                    <Typography variant="heroTitle" gutterBottom>
+                    <Typography
+                        variant="heroTitle"
+                        gutterBottom
+                        sx={{
+                            fontSize: {
+                                xs: "64px",
+                                lg: "82px",
+                            },
+                        }}
+                    >
                         Explore your place to stay
                     </Typography>
                 </div>
@@ -123,15 +135,15 @@ export default function Home() {
 
             <div className={styles.paginationWrapper}>
                 {totalPages > 1 && (
-                    <div>
-                        <Pagination
-                            count={totalPages}
-                            page={currentPage}
-                            onChange={handlePageChange}
-                            color="#f8f8f8"
-                            size="large"
-                        />
-                    </div>
+                    <Pagination
+                        count={totalPages}
+                        page={currentPage}
+                        onChange={handlePageChange}
+                        color="#f8f8f8"
+                        size={isSmallScreen ? "small" : "medium"}
+                        siblingCount={isSmallScreen ? 0 : 1}
+                        boundaryCount={isSmallScreen ? 1 : 2}
+                    />
                 )}
             </div>
         </ThemeProvider>

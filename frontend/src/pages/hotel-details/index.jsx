@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router";
 import { useLoaderData } from "react-router";
 import { Typography, Rating, Paper } from "@mui/material";
-import Carousel from "react-material-ui-carousel";
 
 import NavigateBtn from "../../components/UI/atoms/NavigateBtn/index.jsx";
 import styles from "./HotelDetails.module.css";
@@ -37,63 +36,52 @@ export default function HotelDetails() {
 
     const images = getCategoryImages(category);
 
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const randomImage = images[randomIndex];
+
     const handleClick = () => {
         navigate("/");
     };
 
     return (
         <div className={styles.hotelContainer}>
-            <div className={styles.carouselContainer}>
-                <Carousel
-                    animation="fade"
-                    indicators={false}
-                    navButtonsAlwaysVisible={true}
-                    autoPlay={false}
-                >
-                    {images.map((src, index) => (
-                        <Paper key={src} elevation={3} className={styles.hotelImg}>
-                            <img
-                                src={src}
-                                alt={`hotel-${index}`}
-                                style={{
-                                    width: "100%",
-                                    height: "100%",
-                                    objectFit: "cover"
-                                }}
-                            />
-                        </Paper>
-                    ))}
-                </Carousel>
-            </div>
-
-            <Typography variant="h4" mt={4}>{name}</Typography>
-
-            {hotel_rating !== null && (
-                <Rating value={hotel_rating} precision={0.5} readOnly />
-            )}
-
-            <Typography variant="body1" color="text.secondary" mt={2}>
-                {city}, {address}
-            </Typography>
-
-            {phone_number && (
-                <Typography mt={1}><strong>Phone:</strong> {phone_number}</Typography>
-            )}
-
-            {website && (
-                <Typography mt={1}>
-                    <strong>Website:</strong>{" "}
-                    <a href={website} target="_blank" rel="noopener noreferrer">
-                        {website}
-                    </a>
-                </Typography>
-            )}
-
-            <div className={styles.mainBtn}>
-                <NavigateBtn
-                    onClick={handleClick}
-                    text="Go on Main Page"
+            <Paper elevation={3} className={styles.hotelImg}>
+                <img
+                    src={randomImage}
+                    alt="hotel-random"
                 />
+            </Paper>
+
+            <div className={styles.hotelInfo}>
+                <Typography variant="h4" mt={0}>{name}</Typography>
+
+                {hotel_rating !== null && (
+                    <Rating value={hotel_rating} precision={0.5} readOnly />
+                )}
+
+                <Typography variant="body1" color="text.secondary" mt={2}>
+                    {city}, {address}
+                </Typography>
+
+                {phone_number && (
+                    <Typography mt={1}><strong>Phone:</strong> {phone_number}</Typography>
+                )}
+
+                {website && (
+                    <Typography mt={1}>
+                        <strong>Website:</strong>{" "}
+                        <a href={website} target="_blank" rel="noopener noreferrer">
+                            {website}
+                        </a>
+                    </Typography>
+                )}
+
+                <div className={styles.mainBtn}>
+                    <NavigateBtn
+                        onClick={handleClick}
+                        text="Go on Main Page"
+                    />
+                </div>
             </div>
         </div>
     );

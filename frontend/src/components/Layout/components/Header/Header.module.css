@@ -1,10 +1,10 @@
 .header {
-    background-color: transparent;
+    background-color: var(--color-back-beige);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: var(--lg) var(--xl);
+    padding: var(--s) var(--xl);
     z-index: 1000;
 }
 
@@ -29,7 +29,25 @@
     border-radius: var(--xs);
 }
 
-.navLink:hover {
-    color: var(--color-back-white);
-    background-color: var(--textColor);
+.mobileMenuItem {
+    padding: var(--xs) 4px;
+    font-size: 16px;
+    color: #181818;
+    font-weight: 500;
+    border-radius: var(--xs);
+}
+
+@media (min-width: 600px) {
+    .navLink:hover {
+        color: var(--color-back-white);
+        background-color: var(--textColor);
+    }
+}
+
+@media (max-width: 600px) {
+    .mobileMenuItem:hover {
+        color: var(--color-back-white);
+        background-color: var(--textColor);
+        cursor: pointer;
+    }
 }
