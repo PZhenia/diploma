@@ -6,6 +6,7 @@ import { useMediaQuery } from "@mui/material";
 import useDebounce from "../../hooks/useDebounce.js";
 
 import Typography from "@mui/material/Typography";
+import CircularProgress from "@mui/material/CircularProgress";
 
 import { getHotels } from "../../store/thunks/hotelsThunk";
 
@@ -52,6 +53,7 @@ export default function Home() {
     const hotelsPerPage = 10;
 
     const hotels = useSelector(state => state.hotels.hotels || []);
+    const loading = useSelector(state => state.hotels.loading);
 
     const isSmallScreen = useMediaQuery("(max-width:454px)");
 
@@ -114,7 +116,11 @@ export default function Home() {
             </div>
 
             <div className={styles.hotelsList}>
-                {currentHotels.length > 0 ? (
+                {loading ? (
+                    <div style={{ display: "flex", justifyContent: "center", padding: "50px" }}>
+                        <CircularProgress size={40} />
+                    </div>
+                ) : currentHotels.length > 0 ? (
                     currentHotels.map(hotel => (
                         <Hotel
                             key={hotel.id}
@@ -132,6 +138,7 @@ export default function Home() {
                     </div>
                 )}
             </div>
+
 
             <div className={styles.paginationWrapper}>
                 {totalPages > 1 && (
